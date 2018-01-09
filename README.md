@@ -12,4 +12,4 @@ To strat the training, we need to collect our training dataset. The dataset used
 ### Crop the images
 The training image size I'm using is 64 to 64. Therefore, I need to crop the background images and robot images all to the same size. For positve data, I used a "BBox-Label-Tool" to crop the robot images. You can find it in this link: https://github.com/puzzledqs/BBox-Label-Tool. For nagative data, I used the python code "cropbg.py" to crop the bg images every 16 pixels horizontally and every 18 pixels vertically.
 ### Prepare the description file
-For negative dataset, we need to provide negative txt file. The code "negwrite.py" can write all the neagtive files' diretory into a txt file. For positive dataset, we need to use opencv command: opencv_createsamples -info info/info.lst -vec positives.vec -num 400 -w 30 -h 30
+For negative dataset, we need to provide negative txt file. The code "negwrite.py" can write all the neagtive files' diretory into a txt file. For positive dataset, we need to create a positive.vec file using opencv command: opencv_createsamples -info info/info.lst -vec positives.vec -num 400 -w 20 -h 20.
